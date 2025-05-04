@@ -5,11 +5,11 @@ import useAuth from "../hooks/useAuth";
 import "../app/globals.css";
 import "./dashboard.css";
 import { Menu } from "lucide-react";
-// import Image from "next/image";
+import Image from "next/image";
 import Sidebar from "@/components/Sidebar"; // Import Sidebar
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Dashboard = () => {
   const router = useRouter();
@@ -33,6 +33,23 @@ const Dashboard = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+
+      <motion.div
+        initial={{ opacity: 0.4 }}
+        animate={{ opacity: 0.8 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+        className="railway z-[-1] absolute w-full h-[calc(100vh+560px)] md:h-[calc(100vh)] lg:h-[calc(100vh)]"
+      >
+        <Image 
+          src="/irly.jpg" 
+          alt="Background" 
+          layout="fill"
+          objectFit=""
+          priority
+          placeholder="blur" 
+          blurDataURL="/irly.jpeg" 
+        />
+      </motion.div>
 
       <Header/>
 
