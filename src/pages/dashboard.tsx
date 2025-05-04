@@ -8,7 +8,6 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Sidebar from "@/components/Sidebar"; // Import Sidebar
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import AboutHeader from "@/components/AboutHeader";
 
