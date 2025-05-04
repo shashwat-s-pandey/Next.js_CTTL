@@ -33,7 +33,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
 
         <ul className="mt-6 space-y-4">
 
-          <li className="text-gray-100 font-semibold">Welcome, admin</li>
+          <li className="text-black font-semibold">Welcome, admin</li>
 
           {/* Dashboard - Opens Login Modal */}
           <li>
