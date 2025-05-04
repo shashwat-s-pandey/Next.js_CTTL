@@ -12,16 +12,6 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const router = useRouter();
     useAuth(); // Redirects if not logged in
   
-    const [uid, setUsername] = useState("");
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Sidebar state
-  
-    useEffect(() => {
-      const storedUser = localStorage.getItem("uid");
-      if (storedUser) {
-        setUsername(storedUser);
-      }
-    }, []);
-  
     const handleLogout = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("uid");
