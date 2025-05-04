@@ -61,7 +61,7 @@ const Dashboard = () => {
 
       <iframe
         src="https://osivamh5v2wvbf2.in.qlikcloud.com/single/?appid=b20f1dc4-904a-4307-8ac0-de82fe4d1752&sheet=FgyU&theme=horizon&opt=ctxmenu,currsel"
-        style={{ border: 'none', width: '100%', height: '100%' }}
+        style={{ border: 'none', width: '100%', height: '600px' }}
         title="Qlik Dashboard"
         allowFullScreen
       />
