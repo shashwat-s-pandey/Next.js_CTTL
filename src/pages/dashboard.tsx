@@ -1,6 +1,6 @@
 "use client";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+// import { useRouter } from "next/navigation";
+import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import "../app/globals.css";
 import "./dashboard.css";
@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import AboutHeader from "@/components/AboutHeader";
 
 const Dashboard = () => {
-  const router = useRouter();
   useAuth(); // Redirects if not logged in
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Sidebar state
