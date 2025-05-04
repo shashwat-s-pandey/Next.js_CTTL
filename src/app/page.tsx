@@ -4,7 +4,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import Nav from "@/components/Nav";
+// import Nav from "@/components/Nav";
 // import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 // import { useState } from "react";

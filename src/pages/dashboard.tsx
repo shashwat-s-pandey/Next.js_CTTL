@@ -5,11 +5,11 @@ import useAuth from "../hooks/useAuth";
 import "../app/globals.css";
 import "./dashboard.css";
 import { Menu } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import Sidebar from "@/components/Sidebar"; // Import Sidebar
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Dashboard = () => {
   const router = useRouter();
