@@ -1,7 +1,7 @@
 import AboutHeader from '@/components/AboutHeader'
 import React from 'react'
 import "../app/globals.css";
-import AboutNav from '@/components/AboutNav';
+// import AboutNav from '@/components/AboutNav';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { motion } from "framer-motion";
