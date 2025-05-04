@@ -10,6 +10,7 @@ import Sidebar from "@/components/Sidebar"; // Import Sidebar
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
+import AboutHeader from "@/components/AboutHeader";
 
 const Dashboard = () => {
   const router = useRouter();
@@ -51,7 +52,7 @@ const Dashboard = () => {
         />
       </motion.div>
 
-      <Header/>
+      <AboutHeader/>
 
       {/* Navbar */}
       <nav className="bg-blue-500 h-12 z-50 flex items-center justify-between px-4 shadow-md top-0 left-0 w-full">

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { LoginModal } from "./LoginModal";
 import { ChevronDown } from "lucide-react";
 
-const Header = () => {
+const AboutHeader = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const text = "TTE Lobby";
@@ -38,7 +38,7 @@ const Header = () => {
           <ul className="flex font-bold text-sm lg:text-[18px] md:text-lg h-full items-center justify-center">
             {/* Typing Effect Heading */}
               <motion.h1
-                className="pl-20 font-['Big_Shoulders'] lg:text-4xl text-lg font-extrabold bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text"
+                className="font-['Big_Shoulders'] pr-7 lg:text-4xl text-lg font-extrabold bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -71,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AboutHeader;
