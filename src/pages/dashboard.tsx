@@ -64,16 +64,7 @@ const Dashboard = () => {
               Welcome to Computerized TTE Lobby
         </h1>
 
-        <div className="h-full flex items-center">
-          <ul className="flex text-sm lg:text-lg md:text-lg h-full items-center justify-center">
-            {uid && <li className="text-gray-100 font-semibold">Welcome, admin</li>}
-            <li>
-              <button onClick={handleLogout} className="text-gray-100 ml-10 hover:text-black">
-                Log Out
-              </button>
-            </li>
-          </ul>
-        </div>
+        
       </nav>
 
       <iframe

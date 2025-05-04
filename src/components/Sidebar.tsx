@@ -1,12 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { LayoutDashboard, Train, ClipboardList, Bell, Settings } from "lucide-react";
 import { LoginModal } from "./LoginModal";
 import "./Sidebar.css"
+import { useRouter } from "next/router";
+import useAuth from "@/hooks/useAuth";
 
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const router = useRouter();
+    useAuth(); // Redirects if not logged in
+  
+    const [uid, setUsername] = useState("");
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Sidebar state
+  
+    useEffect(() => {
+      const storedUser = localStorage.getItem("uid");
+      if (storedUser) {
+        setUsername(storedUser);
+      }
+    }, []);
+  
+    const handleLogout = () => {
+      localStorage.removeItem("token");
+      localStorage.removeItem("uid");
+      router.push("/");
+    };
 
   return (
     <div>
@@ -14,7 +34,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
       <aside
-  className={`sidebar absolute left-0 top-[125px] w-[187px] transition-all duration-300 shadow-xl border-gray-200 bg-white/30 backdrop-blur-lg flex flex-col md:min-h-[calc(100vh-130px)] lg:min-h-[calc(100vh-130px)] bottom-0 z-40 ${
+  className={`sidebar absolute left-0 top-[125px] w-[187px] transition-all duration-300 shadow-xl border-gray-200 bg-white/80 backdrop-blur-lg flex flex-col md:min-h-[calc(100vh-130px)] lg:min-h-[calc(100vh-130px)] bottom-0 z-40 ${
     isOpen ? "px-4" : "px-2 w-[77px]"
   }`}
   style={{ height: "calc(100vh - 125px)",
@@ -22,6 +42,8 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
 >
 
         <ul className="mt-6 space-y-4">
+
+          <li className="text-gray-100 font-semibold">Welcome, admin</li>
 
           {/* Dashboard - Opens Login Modal */}
           <li>
@@ -84,6 +106,12 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
               </span>
             </Link>
           </li>
+
+          <li>
+              <button onClick={handleLogout} className="text-gray-100 ml-10 hover:text-black">
+                Log Out
+              </button>
+            </li>
         </ul>
       </aside>
     </div>
