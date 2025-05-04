@@ -15,21 +15,7 @@ const Dashboard = () => {
   const router = useRouter();
   useAuth(); // Redirects if not logged in
 
-  const [uid, setUsername] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Sidebar state
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem("uid");
-    if (storedUser) {
-      setUsername(storedUser);
-    }
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("uid");
-    router.push("/");
-  };
 
   return (
     <div className="flex flex-col min-h-screen">
