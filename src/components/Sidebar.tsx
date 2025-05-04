@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { LayoutDashboard, Train, ClipboardList, Bell, Settings } from "lucide-react";
 import { LoginModal } from "./LoginModal";
