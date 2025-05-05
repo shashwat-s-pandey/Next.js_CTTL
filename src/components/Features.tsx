@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { LoginModal } from "./LoginModal";
 import Image from "next/image";
@@ -8,6 +9,7 @@ const Features = () => {
     { title: "1", description: "Drawing out of TTE links.", image: "/feature1.png" },
     { title: "2", description: "Accountal of duty hours.", image: "/feature2.png" },
     { title: "3", description: "Preparation of TA/night duty allowance bills.", image: "/feature3.png" },
+    { title: "4", description: "EFT earning accountal.", image: "/feature4.png"},
   ];  
 
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -17,11 +19,11 @@ const Features = () => {
       <div className="container mx-auto text-center">
         <h1 className="text-white font-semibold font-['Big_Shoulders'] text-[35px]">BENEFITS TO TTEs</h1>
         {/* Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 py-5 gap-x-[1px] gap-y-8 items-center">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 py-5 gap-x-[15px] gap-y-8 items-center">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white/80 transform hover:-translate-y-2 ease-out duration-500 
+              className="bg-white/80 rounded-md transform hover:-translate-y-2 ease-out duration-500 
                         shadow-md flex flex-col justify-center items-center 
                         h-[200px] md:h-[150px] w-[150px] md:w-auto text-sm md:text-lg"
             >

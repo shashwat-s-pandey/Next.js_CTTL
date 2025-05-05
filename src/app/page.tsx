@@ -18,7 +18,7 @@ export default function Home() {
       <Header/>
       <motion.div
         initial={{ opacity: 0.4 }}
-        animate={{ opacity: 0.8 }}
+        animate={{ opacity: 0.9 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
         className="railway z-[-1] absolute w-full h-[calc(100vh+560px)] md:h-[calc(100vh)] lg:h-[calc(100vh)]"
       >

@@ -1,20 +1,16 @@
 "use client";
 // import { useRouter } from "next/navigation";
-import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import "../app/globals.css";
 import "./dashboard.css";
-import { Menu } from "lucide-react";
+// import { Menu } from "lucide-react";
 import Image from "next/image";
-import Sidebar from "@/components/Sidebar"; // Import Sidebar
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import AboutHeader from "@/components/AboutHeader";
 
 const Dashboard = () => {
   useAuth(); // Redirects if not logged in
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Sidebar state
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -23,7 +19,7 @@ const Dashboard = () => {
         initial={{ opacity: 0.4 }}
         animate={{ opacity: 0.8 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="railway z-[-1] absolute w-full h-[calc(100vh+560px)] md:h-[calc(100vh)] lg:h-[calc(100vh)]"
+        className="railway z-[-1] fixed w-full h-[calc(100vh+560px)] md:h-[calc(100vh)] lg:h-[calc(100vh)]"
       >
         <Image 
           src="/irly.jpg" 
@@ -38,26 +34,14 @@ const Dashboard = () => {
 
       <AboutHeader/>
 
-      {/* Navbar */}
-      <nav className="bg-blue-500 h-12 z-50 flex items-center justify-between px-4 shadow-md top-0 left-0 w-full">
-        {/* Sidebar Toggle Button */}
-        <button className="text-white hover:scale-110 p-2" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-          <Menu className="w-7 h-7" />
-        </button>
-
-        <h1 className="animate-marquee text-gray-100 text-xl hover:text-bold">
-              Welcome to Computerized TTE Lobby
-        </h1>
-
-        
-      </nav>
-
       <iframe
         src="https://osivamh5v2wvbf2.in.qlikcloud.com/single/?appid=b20f1dc4-904a-4307-8ac0-de82fe4d1752&sheet=FgyU&theme=horizon&opt=ctxmenu,currsel"
         style={{
           border: 'none',
           marginLeft: 'auto',   // Pushes it to the right
           marginRight: '50px',  // Adds space on the right
+          marginTop: '100px',
+          marginBottom: '10px',
           display: 'block',
           width: '80%',
           height: '600px'
@@ -69,7 +53,6 @@ const Dashboard = () => {
       {/* Sidebar and Main Content Wrapper */}
       <div className="">
         {/* Sidebar below navbar */}
-        <Sidebar isOpen={isSidebarOpen} />
 
         {/* Main Content */}
         {/* <main className="flex-1 p-4">
