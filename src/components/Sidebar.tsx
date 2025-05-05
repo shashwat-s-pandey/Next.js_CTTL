@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { LayoutDashboard, Train, ClipboardList, Bell, Settings, LogIn, LogOutIcon } from "lucide-react";
+import { LayoutDashboard, Train, ClipboardList, Bell, Settings, LogOutIcon } from "lucide-react";
 import { LoginModal } from "./LoginModal";
 import "./Sidebar.css"
 import { useRouter } from "next/router";

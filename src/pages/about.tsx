@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import Link from 'next/link';
 
-const about = () => {
+const About = () => {
   const text = "TTE Lobby";
     const [displayedText, setDisplayedText] = useState(""); // Initialize as empty string
   
@@ -90,4 +90,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About
